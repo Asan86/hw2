@@ -1,15 +1,20 @@
 package com.company;
 
 public  class Dog extends Animal implements Printable {
-    private   String  age;
+    String  breed;
 
-
-    public String getAge() {
-        return age;
+    public String getBreed() {
+        return breed;
     }
 
-    public void setAge(String age) {
-        this.age = age;
+
+    public Dog(int age, String color, String breed) {
+        super(age, color);
+        this.breed = breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
     @Override
@@ -17,8 +22,5 @@ public  class Dog extends Animal implements Printable {
         System.out.println("gav-gav");
     }
 
-    public Dog(String age) {
-        this.age = age;
-    }
-}
 
+}
